@@ -5,6 +5,10 @@
 [[https://godoc.org/github.com/tealeg/xlsx][https://godoc.org/github.com/tealeg/xlsx?status.svg]]
 [[https://github.com/tealeg/xlsx#license][https://img.shields.io/badge/license-bsd-orange.svg]]
 
+** Fork改动内容
+读取xlsx文件时，如果中间空行太多，会导致内存溢出问题。
+比如xlsx的1-10000行有数据，1000001有数据，中间没有，原版库会多占用中间这段无数据的内存，导致问题
+
 ** Introduction
 xlsx is a library to simplify reading and writing the XML format used
 by recent version of Microsoft Excel in Go programs.
